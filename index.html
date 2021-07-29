@@ -1,0 +1,82 @@
+<Doctype html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="examen.css">
+    </head>
+    <body>
+        <div>   
+            <header>
+                <h1>¡Examen semestral!</h1>
+            </header>
+            <nav>
+                <ul >
+                    <li> <a href="examen.html" id="inicio"> Inicio</a></li>
+                    <li><a href="calculadora.html" id="calculadora">Calculadora</a></li> 
+                    <li >Proyecto</li>
+                </ul>
+            </nav>
+        </div>
+        <input onclick="funcion()" value="Calcular o imprimir" id="boton" type="button"/>
+        <script>
+            function funcion()
+            {
+            var operacion;
+            var suma1;
+            var suma2;
+            var resultadosuma;
+            var resta1;
+            var resta2;
+            var resultadoresta;
+            var multiplicacion1;
+            var multiplicacion2;
+            var resultadomulti;
+            var x=0;
+            var modu1;
+            var modu2;
+            var moduresultado;
+            var operacion =prompt("Que operación  matemática​ deseas realizar: \n 1.Suma \n 2.Resta \n 3.Mulplicación \n 4.División \n 5.Modulo \n6.Imprimir un texto las veces que introduzca")
+            if (operacion=="1") {
+                var suma1=prompt ("Ingrese el primer número");
+                var suma2=prompt("Ingrese el segundo número");
+                var resultadosuma= (parseInt(suma1)+parseInt(suma2));
+                document.write("<h1> El resultado la suma es de: "+ resultadosuma+ "</h1>");
+        
+            }
+            else if (operacion=="2") {
+                var resta1=prompt ("Ingrese el primer número");
+                var resta2=prompt ("Ingrese el seguno número");
+                var resultadoresta =(parseInt(resta1)-parseInt(resta2));
+                document.write("<h1> La diferencia de la resta es de: "+resultadoresta+"</h1>");
+            }
+            else if (operacion=="3") {
+                var multiplicacion1=prompt("Ingrese el primer número");
+                var multiplicacion2=prompt("Ingrese el sgundo número");
+                var resultadomulti= (parseInt(multiplicacion1)*parseInt(multiplicacion2));
+                document.write("<h1> El producto de la multiplicación es de: " +resultadomulti+"</h1>");
+            }  
+            else if (operacion=="4") {
+               var division1=prompt("Ingrese el primer número");
+               var division2=prompt("Ingrese el segundo número");
+               var resultadodivision=(parseInt(division1)/parseInt(division2));
+               document.write("<h1> El resultado de la división es de: "+resultadodivision+"</h1>");
+            }
+            else if (operacion=="5") {
+                var modu1=prompt("Ingrese el primer número");
+                var modu2=prompt("Ingrese el segundo número");
+                var moduresultado= modu1 % modu2;
+                document.write("<h1>El resultado es de: "+ moduresultado+ "</h1>");   
+            }
+            else if (operacion=="6") {
+                var cuantasveces=prompt("¿Cuántas veces desea imprimir el texto?");
+                var texto=prompt("¿Qué texto desea imprimir?");
+                for (var x = 0; x<=cuantasveces; x++) {
+                    document.write ("<h1> Su texto registrado fue: "+ texto+"<br>")+"</h1>";  
+                }
+            }else {
+                document.write ("<h1> Asegúrese de haber ingresado el número correctamente (1,2,3,4,5 o 6)"+"</h1>");
+                }
+            }  
+        </script>
+        <footer>No Pierdas La Esperanza</footer>
+    </body>
+</html>
